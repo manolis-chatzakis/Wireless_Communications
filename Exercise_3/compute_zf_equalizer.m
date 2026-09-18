@@ -12,7 +12,7 @@ function f_zf = compute_zf_equalizer(h_ls, K, delta)
     
     % Unit vector with 1 at position delta
     e = zeros(g_length, 1);
-    e(delta + 1) = 1;
+    e(delta +1 ) = 1;
     
     % Construct Toeplitz matrix
     col_input = [h_ls; zeros(g_length - length(h_ls), 1)];

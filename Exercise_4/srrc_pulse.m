@@ -1,15 +1,15 @@
 function [phi, t] = srrc_pulse(T, Ts, A, a)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % phi = srrc_pulse(T, Ts, A, a)                                                 %
-% OUTPUT                                                                        %    
+% OUTPUT                                                                        %
 %      phi: truncated SRRC pulse, with parameter T,                             %
 %                 roll-off factor a, and duration 2*A*T                         %
 %      t:   time axis of the truncated pulse                                    %
-% INPUT                                                                         %      
-%      T:  Nyquist parameter or symbol period  (real number)                    %       
-%      Ts: sampling period  (Ts=T/over)                                         %      
-%                where over is a positive INTEGER called oversampling factor    %      
-%      A:  half duration of the pulse in symbol periods (positive INTEGER)      %        
+% INPUT                                                                         %
+%      T:  Nyquist parameter or symbol period  (real number)                    %
+%      Ts: sampling period  (Ts=T/over)                                         %
+%                where over is a positive INTEGER called oversampling factor    %
+%      A:  half duration of the pulse in symbol periods (positive INTEGER)      %
 %      a:  roll-off factor (real number between 0 and 1)                        %
 %                                                                               %
 %    A. P. Liavas, Nov. 2011                                                    %

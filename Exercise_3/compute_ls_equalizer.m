@@ -16,9 +16,7 @@ function f_ls = compute_ls_equalizer(y_n, n1, n2, K_eq, delta,training_symbols)
     row_y = y_n(n1_eq:-1:n1_eq-K_eq);
     Ytrain = toeplitz(col_y, row_y);
     
-    % Training symbols (must be provided externally)
-    a_train = training_symbols;  % Assumes global variable
     
     % LS equalizer solution
-    f_ls = (Ytrain' * Ytrain) \ (Ytrain' * a_train);
+    f_ls = (Ytrain' * Ytrain) \ (Ytrain' * training_symbols);
 end

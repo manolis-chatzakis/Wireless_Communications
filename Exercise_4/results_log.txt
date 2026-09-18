@@ -1,0 +1,54 @@
+===== PART 1 =====
+Complex channel coefficient for 1.8: c = -0.7093 +0.6824j  (|c| = 0.9843, angle = 136.11 deg)
+
+--- Part 1, case c1 ---
+Peak of |h(t)| at sample 60 (t = 6.0 T), |h| = 0.9996
+Energy sync: d* = 60, E_max = 399.274, second largest E_d = 397.260
+Training sync: d* = 60
+max |r_k - c*A_k| = 3.17e-02
+
+--- Part 1, case crand ---
+Peak of |h(t)| at sample 60 (t = 6.0 T), |h| = 0.9839
+Energy sync: d* = 60, E_max = 386.822, second largest E_d = 384.871
+Training sync: d* = 60
+max |r_k - c*A_k| = 3.12e-02
+
+===== PART 2 =====
+DFs = DF*Ts = 0.001,  Df = DF*T = 0.01
+Case b: c = -0.7093 +0.6824j, phi = 5.4516 rad
+Theoretical |alpha|/(Ntr*sA2) = 0.6367
+
+--- Part 2, case a ---
+Energy sync: d* = 60
+Training sync: d* = 61, max|h_hat|/max|h| = 0.6367
+CFO estimate: Df_hat = 0.010010 (true 0.010000), DFs_hat = 1.001e-03 (true 1.000e-03)
+LS channel: h0 = 0.9811 +0.1860j  (|h0| = 0.9985, angle = 10.73 deg)
+Symbol errors: 0 / 200, max |r_eq - A| = 0.036
+With d_train = 61 instead: Df_hat = 0.009857, max |r_eq - A| = 0.519
+
+--- Part 2, case b ---
+Energy sync: d* = 60
+Training sync: d* = 61, max|h_hat|/max|h| = 0.6367
+CFO estimate: Df_hat = 0.010010 (true 0.010000), DFs_hat = 1.001e-03 (true 1.000e-03)
+LS channel: h0 = -0.1571 +0.9702j  (|h0| = 0.9828, angle = 99.20 deg)
+Symbol errors: 0 / 200, max |r_eq - A| = 0.036
+With d_train = 61 instead: Df_hat = 0.009857, max |r_eq - A| = 0.519
+
+===== PART 3 =====
+K = 32 samples (3.2 T), c0 = -0.1904 -1.0210j, c1 = 2.1523 +0.0471j
+d range for E_d: 0,...,63. d* (estimated h) = 32, d* (true h) = 32
+E_d (true h) at d = [2 12 22 32 42 52 62] : [5.6565 5.6565 5.6565 5.6568 5.6566 5.6526 5.6042]
+LS channel error ||h_ls - h_disc|| / ||h_disc|| = 8.341e-04
+ZF: |g_delta| = 0.9612, max |g_n| (n ~= delta) = 0.1480
+Symbol errors: 0 / 200, MSE = 7.245e-02
+
+===== PART 4 =====
+DFs = 0.001 (Df = 0.01), phi = 4.0186 rad
+d* with CFO = 12 (d* without CFO = 32)
+Without CFO correction: symbol errors 155 / 200
+Joint LS: Df_hat = 0.01002 (true 0.01000), DFs_hat = 1.002e-03
+||h_ls4 - h*|| = 0.000e+00 (LS after correction vs joint LS)
+Phase of h_ls4 ./ h_disc4 (deg): [152.8 -61.8 -128.6 -132.1 -134.6 -136.8 -139.4 -138 -136.5 -105.7]
+Symbol errors: 0 / 200, MSE = 3.232e-01
+d* mod over: part 3 -> 2, part 4 -> 2
+Starting from d = 32 instead: Df_hat = 0.01000, MSE = 7.342e-02

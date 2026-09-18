@@ -1,8 +1,9 @@
 function bits = qam4_to_bits(symbols)
 
 
-    real_bits = (real(symbols) < 0);  %  Re<0 →1, else 0
-    imag_bits = (imag(symbols) < 0);  %  Im<0 →1, else 0
+    real_bits = (real(symbols) >= 0);  % <0 → 0, else 1
+    imag_bits = (imag(symbols) >= 0);  % <0 → 0, else 1
+
     
     L = length(symbols);
     bits = zeros(2*L, 1);
